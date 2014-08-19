@@ -21,3 +21,6 @@ exports.create = function(req, res){
     res.redirect('/vacations');
   });
 };
+
+exports.show = function(req, res){
+};

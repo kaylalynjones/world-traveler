@@ -8,7 +8,7 @@ var expect      = require('chai').expect,
     dbConnect   = require('../../app/lib/mongodb'),
     cp          = require('child_process'),
     Mongo       = require('mongodb'),
-    db          = 'traveler';
+    db          = 'traveler-test';
 
 describe('Vacation', function(){
   before(function(done){
@@ -36,8 +36,19 @@ describe('Vacation', function(){
   describe('.all', function(){
     it('should get all the vacations', function(done){
       Vacation.all(function(err, vacations){
-        //console.log(vacations);
         expect(vacations).to.have.length(5);
+        done();
+      });
+    });
+  });
+
+  describe('.findById', function(){
+    it('should get a vacation by the id', function(done){
+      var id = '53f37a590d2e4034fcb45e54';
+      Vacation.findById(id, function(vacation){
+
+        console.log(vacation);
+        expect(vacation.name).to.equal('Imperial Beach');
         done();
       });
     });

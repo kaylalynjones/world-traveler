@@ -17,8 +17,8 @@ block content
             th Longitude
           tbody.table-striped
             each vacation in vacations
-              tr
-                td= vacation.name
+              tr(data-name=vacation.name, data-lat=vacation.lat, data-lng=vacation.lng)
+                td: a(href='vacations/'+_id)= vacation.name
                 td= moment(vacation.start).format('LL')
                 td= moment(vacation.end).format('LL')
                 td= vacation.lat.toFixed(4)
