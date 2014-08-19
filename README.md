@@ -1,32 +1,21 @@
-## name of project
+## World-Traveler
 ### Code Badges
-build status icon
-coverage status icon
+
 
 ### About
-write a description about your project
+This app keeps track and maps where you have went on vacation.
 
 ### Models
 ```
-Model 1
-prop-a
-prop-b
-.classMethod-c
-#instanceMethod-d
-```
-
-```
-Model 2
-prop-e
-prop-f
-.classMethod-g
-#instanceMethod-h
+Vacation model
+constructor
+.all
+#save
 ```
 
 ### Features
-- feature 1
-- feature 2
-- feature 3
+- google maps
+- stores vacation info such as latitude, longitude and timeframe.
 
 ### Running Tests
 ```bash
