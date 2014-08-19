@@ -1,8 +1,1 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans);
-
-body{
-  font-family: 'Open Sans', sans-serif;
-  font-size: 13px;
-}
-
-
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);@import url(http://fonts.googleapis.com/css?family=Courgette);body{font-family:'Open Sans',sans-serif;background-color:#fcfbfb;height:100%}body .page-title{font-family:'Courgette',cursive;font-size:2em;color:#7fb791;margin:0 20px;text-align:center;padding:0 20px 20px}body nav ul li{list-style:none;display:inline-block;padding:0 20px;font-size:18px}body a{text-decoration:none}body a:hover{text-decoration:none}body .col-xs-12{padding:0}#map{height:500px}#contact,#faq,#about{width:80%;margin:0 auto}#contact h2,#faq h2,#about h2{font-family:'Courgette',cursive;font-size:2em;color:#7fb791;margin:0 20px;padding:20px}#vacation-list .break{width:auto;height:40px}#vacation-list #map{height:250px}

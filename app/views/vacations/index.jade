@@ -1,0 +1,29 @@
+extends ../shared/template
+block content
+  h1.page-title Not all who wander are lost.
+  #vacation-list
+    #map
+    .row
+      .break
+    .row
+      .col-xs-3
+      .col-xs-6
+        table.table.table-hover
+          thead
+            th Location
+            th Beginning
+            th End
+            th Latitude
+            th Longitude
+          tbody.table-striped
+            each vacation in vacations
+              tr
+                td= vacation.name
+                td= moment(vacation.start).format('LL')
+                td= moment(vacation.end).format('LL')
+                td= vacation.lat.toFixed(4)
+                td= vacation.lng.toFixed(4)
+
+      .col-xs-3
+block scripts
+  script(src='/js/user/vacation-list.js')
