@@ -9,7 +9,6 @@ exports.init = function(req, res){
 
 exports.index = function(req, res){
   Vacation.all(function(err, vacations){
-    //console.log(vacations);
     res.render('vacations/index', {vacations:vacations, moment:moment});
   });
 };
@@ -23,4 +22,7 @@ exports.create = function(req, res){
 };
 
 exports.show = function(req, res){
+  Vacation.findById(req.params.id, function(vacation){
+    res.render('vacations/show', {vacation:vacation, moment:moment});
+  });
 };

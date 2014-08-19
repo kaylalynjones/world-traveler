@@ -22,9 +22,7 @@ Vacation.all = function(cb){
 
 Vacation.findById = function(id, cb){
   id = Mongo.ObjectID(id);
-  console.log(id);
   Vacation.collection.findOne({_id:id}, function(err, vacation){
-    console.log(vacation);
     cb(vacation);
   });
 };
@@ -36,12 +34,6 @@ Vacation.prototype.save = function(cb){
     cb(vacation);
   });
 };
-
-//private function
-function changePrototype(obj){
-  var vacations = _.create(Vacation.prototype, obj);
-  return vacations;
-}
 
 
 module.exports = Vacation;

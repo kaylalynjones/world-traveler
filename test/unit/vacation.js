@@ -44,7 +44,7 @@ describe('Vacation', function(){
 
   describe('.findById', function(){
     it('should get a vacation by the id', function(done){
-      var id = '53f37a590d2e4034fcb45e54';
+      var id = '000000000000000000000001';
       Vacation.findById(id, function(vacation){
 
         console.log(vacation);
