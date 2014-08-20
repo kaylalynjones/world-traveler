@@ -8,13 +8,8 @@ block content
       .col-xs-6
         .row
           .col-xs-12
-            form(method='post', action='/vacations/#{vacation._id}/photos/new')
-              .form-group
-                  label(for='url') Photo URL
-                  input.form-control#url(type='text', name='url')
-                button.btn.btn-success(type='submit') Add Photo
             #vacation(data-name=vacation.name, data-lat=vacation.lat, data-lng=vacation.lng)
-              .page-header: p= vacation.name
+              .page-header: p#vacation-header= vacation.name
                 table.table
                   thead
                     th Location
@@ -29,6 +24,24 @@ block content
                         td= moment(vacation.end).format('LL')
                         td= vacation.lat.toFixed(4)
                         td= vacation.lng.toFixed(4)
+
+            form(method='post', action='/vacations/#{vacation._id}/photos/download')
+              .form-group
+                  label(for='url') Photo URL
+                  input.form-control#url(type='text', name='url')
+                button.btn.btn-success(type='submit') Add Photo
+
+            form(method='post', action='/vacations/#{vacation._id}/photos/upload', enctype='multipart/form-data')
+              .form-group
+                  label(for='photos') Photos
+                  input.form-control#url(type='file', name='photos', multiple=true)
+                button.btn.btn-success(type='submit') Upload Photo
+
+    .row#image-window
+      each photo in vacation.photos
+        .col-xs-4
+          a(href='#')
+            img.photo.img-rounded(src='#{photo}')
 
 block scripts
   script(src='/js/user/show-vacation.js')

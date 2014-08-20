@@ -8,6 +8,7 @@
     var pos = getPosition();
     initMap(pos.lat, pos.lng, 11);
     addMarker(pos.lat, pos.lng, pos.name);
+    //$('.carousel').carousel();
   });
 
   function addMarker(lat, lng, name){
