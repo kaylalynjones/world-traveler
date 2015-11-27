@@ -17,15 +17,6 @@ constructor
 - google maps
 - stores vacation info such as latitude, longitude and timeframe.
 
-### Running Tests
-```bash
-$ npm install
-$ npm test
-```
-
-### Contributors
-- [Chyld Medford](https://github.com/chyld)
-
 ### License
 [MIT](LICENSE)
 
